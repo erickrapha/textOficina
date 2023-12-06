@@ -1,17 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class dialogueManager : MonoBehaviour
 {
     public EfeitoDigitador caixaDeDialogo;
     public GameObject botaoContinuar;
     public bool rodando, proximo;
-    public textList dialogo;
+    public Image imagePerfil;
+    public TextMeshProUGUI nomep;
 
     void Start()
     {
-       
+        Resetar();
+    }
+    public void PlayDialogo(Dialogo dialogo)
+    {
+        imagePerfil.sprite = dialogo.perfilPersonagem.sprite;
+        nomep.text = dialogo.perfilPersonagem.nome;
+
+        StartCoroutine(ExibirSequencia(dialogo.lista));
+    }
+
+    public void Resetar()
+    {
+        imagePerfil.sprite = null;
+        nomep.text = "";
     }
     IEnumerator ExibirSequencia(List<string> lista)
     {
@@ -39,18 +55,12 @@ public class dialogueManager : MonoBehaviour
         }
         caixaDeDialogo.Limpar();
         rodando = false;
+        Resetar();
         StopCoroutine(ExibirSequencia(lista));
     }
     void Update()
     {   
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            StartCoroutine(ExibirSequencia(dialogo.lista1));
-        }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            StartCoroutine(ExibirSequencia(dialogo.lista2));
-        }
+               
         if (!caixaDeDialogo.imprimindo)
         {
             if (Input.GetKeyDown(KeyCode.Space))

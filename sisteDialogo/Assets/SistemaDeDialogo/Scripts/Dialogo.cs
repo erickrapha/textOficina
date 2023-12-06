@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Dialogo", menuName = "ScriptableObjects/Dialogo", order = 0)]
-public class textList : ScriptableObject 
+public class Dialogo : ScriptableObject 
 {
-    public List<string> lista1;
-    public List<string> lista2;
+    public perfilPersonagem perfilPersonagem;
+    public List<string> lista;
 
 }

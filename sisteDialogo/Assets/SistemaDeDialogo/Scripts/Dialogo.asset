@@ -11,12 +11,8 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc24d1c7700d8345953b12e5570a2b1, type: 3}
   m_Name: Dialogo
-  m_EditorClassIdentifier: 
-  lista1:
-  - 7777777777777777777
-  - 888888888888888888888
-  - 999999999999999999999999999
-  lista2:
-  - 111111111111111111111
-  - 555555555555555
-  - 66666666666666
+  m_EditorClassIdentifier: Assembly-CSharp::textList
+  perfilPersonagem: {fileID: 11400000, guid: 59199f9e2e6910d478c60231c4ce01a6, type: 2}
+  lista:
+  - "renan, voc\xEA gosta de queijo?"
+  - "claro p\xF4!"

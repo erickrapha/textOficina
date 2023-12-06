@@ -11,6 +11,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cc24d1c7700d8345953b12e5570a2b1, type: 3}
   m_Name: Dialogo 1
-  m_EditorClassIdentifier: 
-  lista1: []
-  lista2: []
+  m_EditorClassIdentifier: Assembly-CSharp::textList
+  perfilPersonagem: {fileID: 11400000, guid: 1c6c805ea0265c041b04e4010cc94991, type: 2}
+  lista:
+  - "renan, voc\xEA gosta de queijo?"
+  - "claro p\xF4!"
+  - VVVVVVVVVVVVVVVV
+  - UUUUUUUUUUUUUUUUUUUUUUUUUUU
+  - RRRRRRRRRRRRRR
